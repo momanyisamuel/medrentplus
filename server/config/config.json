@@ -1,0 +1,13 @@
+{
+    "development": {
+      "dbUrl": "mongodb://localhost:27017/medrental"
+    },
+    "production": {
+      "use_env_variable": "DATABASE_URL",
+      "dialect": "postgres"
+    },
+    "secrets": {
+      "jwt": "thtittibnidnib3378857",
+      "jwtExp": "100d"
+    }
+  }
