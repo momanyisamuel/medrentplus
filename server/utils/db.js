@@ -1,11 +1,19 @@
+import mongoose from "mongoose";
+import options from "../config/config.json";
 
-import mongoose from 'mongoose'
-import options from '../config/config.json'
+export const connect = (url = options.production.dbUrl, opts = {}) => {
+  console.log("DB Connection Established");
 
-export const connect = (url = options.development.dbUrl, opts = {}) => {
-  console.log("DB Connection Established")
-  return mongoose.connect(
-    url,
-    { ...opts, useNewUrlParser: true,  useUnifiedTopology: true }
-  )
-}
+  try {
+    return mongoose.connect(
+      url,
+      {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      },
+      () => console.log("connected")
+    );
+  } catch (error) {
+    return console.log("could not connect");
+  }
+};

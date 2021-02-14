@@ -6,6 +6,7 @@ import medItemRouter from "./resources/medItem/medItem.router";
 import { signin, signup, protect } from "./utils/auth";
 
 const app = express();
+const PORT = process.env.PORT || 4000;
 
 //test db connection
 (async () => {
@@ -22,4 +23,4 @@ app.use("/api", protect);
 app.use("/api/user", userRouter);
 app.use("/api/medItem", medItemRouter);
 
-app.listen(4000, () => console.log("Server Started"));
+app.listen(PORT, () => console.log("Server Started"));

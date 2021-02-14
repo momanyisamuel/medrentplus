@@ -40,10 +40,24 @@ userSchema.methods.checkPassword = function (password) {
       if (err) {
         return reject(err);
       }
-
       resolve(same);
     });
   });
 };
 
 export const User = mongoose.model("user", userSchema);
+
+// a document instance
+var defaulUser = new User({
+  email: "admin@admin.admin",
+  password: "pass",
+  firstName: "Admin",
+  lastName: "Administrator",
+  role: "admin",
+});
+
+// save model to database
+defaulUser.save(function (err, user) {
+  if (err) return console.error(err);
+  console.log(user.firstName + " saved as default user.");
+});
