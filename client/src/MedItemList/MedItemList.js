@@ -55,7 +55,7 @@ const MedItemList = () => {
               ></div>
               <div className="w-25 pa2">
                 <h1 className="f6 f5-ns fw6 lh-title black mv0">
-                  <Link to={(location) => `/items/book/${item._id}`}>NAME</Link>
+                  <Link to={(location) => `/items/edit/${item._id}`}>NAME</Link>
                 </h1>
                 <h2 className="f6 fw4 mt2 mb0 black-60">{item.itemName}</h2>
               </div>

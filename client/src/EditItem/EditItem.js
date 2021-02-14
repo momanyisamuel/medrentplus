@@ -27,7 +27,7 @@ const EditItem = () => {
       .then((result) => {
         console.log(result);
       });
-    window.location.replace("/items");
+    // window.location.replace("/items");
   };
 
   const loadUser = () => {

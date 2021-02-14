@@ -4,7 +4,7 @@ import item from "../api/items";
 import { authService } from "../helpers/auth";
 
 const BookItem = () => {
-  const [itemStatus, setitemStatus] = useState("rented");
+  const [itemStatus] = useState("rented");
   const [itemDestinationAdress, setItemDestinationAdress] = useState("");
   const [itemReservePeriod, setItemReservePeriod] = useState("");
   const [itemPaymentMethod, setItemPaymentMethod] = useState("");
