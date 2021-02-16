@@ -6,7 +6,7 @@ const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  constOnFormSubmit = (event) => {
+  const onFormSubmit = (event) => {
     event.preventDefault();
   };
 
