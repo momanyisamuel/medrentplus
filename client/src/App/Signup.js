@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import api from "../api/items";
 
 const Signup = () => {
   const [firstName, setFirstName] = useState("");
@@ -8,6 +9,16 @@ const Signup = () => {
 
   const onFormSubmit = (event) => {
     event.preventDefault();
+    api
+      .post("/signup", {
+        firstName,
+        lastName,
+        email,
+        password,
+      })
+      .then((result) => {
+        console.log(result);
+      });
   };
 
   return (
