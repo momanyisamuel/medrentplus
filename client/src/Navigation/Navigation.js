@@ -15,38 +15,50 @@ const Navigation = () => {
   if (userId) {
     return (
       <div>
-        <header class="flex justify-between bg-black-90">
-          <nav class="pa3 pa4-ns">
+        <header className="flex justify-between bg-black-90">
+          <nav className="pa3 pa4-ns">
             <a
-              class="link dim white b f6 f5-ns dib mr3"
+              className="link dim white b f6 f5-ns dib mr3"
               href="/dashboard"
               title="Home"
             >
               MedRent+
             </a>
             <a
-              class="link dim white f6 f5-ns dib mr3"
+              className="link dim white f6 f5-ns dib mr3"
               href="/dashboard"
               title="Home"
             >
               Dashboard
             </a>
             <a
-              class="link dim white f6 f5-ns dib mr3"
+              className="link dim white f6 f5-ns dib mr3"
               href="/items"
               title="About"
             >
               Inventory
             </a>
-            <a class="link dim white f6 f5-ns dib mr3" href="#" title="Store">
+            <a
+              className="link dim white f6 f5-ns dib mr3"
+              href="#"
+              title="Store"
+            >
               Orders
             </a>
           </nav>
-          <nav class="pa3 pa4-ns">
-            <a class="link dim white f6 f5-ns dib mr3" href="#" title="Home">
+          <nav className="pa3 pa4-ns">
+            <a
+              className="link dim white f6 f5-ns dib mr3"
+              href="#"
+              title="Home"
+            >
               Logout
             </a>
-            <a class="link dim white f6 f5-ns dib mr3" href="#" title="About">
+            <a
+              className="link dim white f6 f5-ns dib mr3"
+              href="#"
+              title="About"
+            >
               User
             </a>
           </nav>
